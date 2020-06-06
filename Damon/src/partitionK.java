@@ -1,15 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class CountSubSet {
-
+public class partitionK {
     public static void main(String[] args )
     {
-        List<List<Integer>> subset= new ArrayList<>();
-        int [] wt={2,2,2,2,3,4,5};
-        int w=5;
+        int[] wt={4, 3, 2, 3, 5, 2, 1};
+        int k=4;
         int n=wt.length;
-        int count=0;
+        int w=5;
+
+
 
         int[][] dp=new int[n+1][w+1];
 
@@ -33,26 +30,17 @@ public class CountSubSet {
                 {
                     dp[i][j]=dp[i-1][j-wt[i-1]]+dp[i-1][j];
 
-
                 }
 
                 else if(wt[i-1]>j)
                 {
                     dp[i][j]=dp[i-1][j];
                 }
+
             }
 
 
         }
-    System.out.println(dp[n][w]);
-
-//        for(int i=0;i<n+1;i++)
-//        {
-//            for(int j=0;j<w+1;j++)
-//            {
-//                System.out.print(dp[i][j]+" ");
-//            }
-//            System.out.println();
-//        }
+        System.out.print(dp[n][w]);
     }
 }

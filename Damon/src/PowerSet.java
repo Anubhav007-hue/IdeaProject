@@ -16,8 +16,8 @@ public class PowerSet {
         subSets.add(new ArrayList<>(current));
         for(int i=index;i<nums.length;i++)
         {
-            int temp=nums[i];
-            current.add(temp);
+
+            current.add(nums[i]);
             generateSubSets(i+1,nums,current,subSets);
             current.remove(current.size()-1);
         }

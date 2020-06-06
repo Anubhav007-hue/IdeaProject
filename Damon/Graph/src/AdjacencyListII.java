@@ -4,10 +4,10 @@ import java.util.List;
 public class AdjacencyListII {
 
     static public class Edge{
-        char destinationVertex;
+        int destinationVertex;
         int weight;
 
-        public Edge(char destinationVertex,int weight)
+        public Edge(int destinationVertex,int weight)
         {
             this.destinationVertex=destinationVertex;
             this.weight=weight;
@@ -35,7 +35,7 @@ public class AdjacencyListII {
             }
         }
 
-        public void addEdge(char source ,char destination,int weight)
+        public void addEdge(int source ,char destination,int weight)
         {
             adjacencyList[source].add(0,new Edge(destination,weight));
         }
