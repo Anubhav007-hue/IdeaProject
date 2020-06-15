@@ -2,8 +2,8 @@ public class LongestCommomSubSequence {
 
     public static void main(String[] args )
     {
-        String text1="aefawfawfawfaw";
-        String text2="aefawfeawfwafwaef";
+        String text1="aadbbcbcac";
+        String text2="dbbca";
 
         int n=text1.length() ;
         int m=text2.length ();
@@ -18,8 +18,7 @@ public class LongestCommomSubSequence {
 
         for(int i=1;i<m+1;i++)
         {
-            dp[0][m]=0
-            ;
+            dp[0][m]=0;
         }
             StringBuilder sb=new StringBuilder();
 

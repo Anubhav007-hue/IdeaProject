@@ -6,7 +6,7 @@ public class CountSubSet {
     public static void main(String[] args )
     {
         List<List<Integer>> subset= new ArrayList<>();
-        int [] wt={2,2,2,2,3,4,5};
+        int [] wt={3,3,5,4};
         int w=5;
         int n=wt.length;
         int count=0;

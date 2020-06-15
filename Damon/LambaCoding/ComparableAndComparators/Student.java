@@ -1,7 +1,7 @@
 
 //Implementing a Comparable class of type student ...
 
-public class Student  implements Comparable<Student>{
+public class Student  {
     int marks;
     String name;
     
@@ -45,17 +45,17 @@ public class Student  implements Comparable<Student>{
 //    TO DO THE SORTING BASED ON THE INCREASING ORDER JUST FLIP THE POSITION OF THE -1 AND 1...
 
 
-    @Override
-    public int compareTo(Student obj) {
-        if(this.marks > obj.marks)
-        {
-            return -1;
-        }
-        else if(this.marks<obj.marks)
-        return 1;
-
-        return this.name.compareTo(obj.name);
-    }
+//    @Override
+//    public int compareTo(Student obj) {
+//        if(this.marks > obj.marks)
+//        {
+//            return -1;
+//        }
+//        else if(this.marks<obj.marks)
+//        return 1;
+//
+//        return this.name.compareTo(obj.name);
+//    }
 
 //    Getters and Setters are used to encapsulate the data
 //    .i.e it can only be accessed by the public class.............................

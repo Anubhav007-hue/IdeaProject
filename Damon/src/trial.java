@@ -4,50 +4,34 @@ import java.util.LinkedList;
 
 public class trial {
 
-
+int [] temp;
     public static void main(String[] args)
     {
-        HashMap<String,Integer> map=new HashMap<>();
-        String [] str={"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"};
-        int k=4;
-        trial t=new trial();
-        List<String > result=new ArrayList<>();
-        List<String> final_list=new ArrayList<>();
-        t.topKFrequent(str,k,result,final_list);
-        System.out.print(final_list+"");
+
+            int n=-3;
+
+            System.out.print(isPowerOfThree(n));
 
     }
-    public List<String> topKFrequent(String[] words, int k, List<String> result, List<String> final_list) {
-        HashMap<String,Integer> map=new HashMap<>();
-        for(String s:words)
+
+    public static  boolean isPowerOfThree(int n) {
+
+        if(n==0)
         {
-            map.put(s,map.getOrDefault(s,0)+1);
+            return false ;
         }
+        n=Math.abs(n);
 
-
-
-        for(int i=words.length-1;i>=0;i--)
+        while(n>1)
         {
-            ArrayList<String> temp=new ArrayList<>();
-            for(String key:map.keySet())
+            if(n%3!=0)
             {
-                if(map.get(key)==i)
-                {
-
-                    temp.add(key);
-                }
+                return false ;
             }
-
-            Collections.sort(temp);
-                result.addAll(temp);
-
+            n=n/3;
         }
 
-        for (int i=0;i<k;i++)
-        {
-            final_list.add(result.get(i));
-        }
-
-        return final_list;
+        return true ;
     }
+
 }
