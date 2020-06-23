@@ -18,6 +18,7 @@ public class maxHeap {
     }
 
     public int leftChild(int pos)
+
     {
         return 2*pos;
     }
